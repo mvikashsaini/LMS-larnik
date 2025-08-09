@@ -1,5 +1,5 @@
 // src/pages/Home.jsx
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Award, BookOpen, Play, Star, Users } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 
 const HomePage = () => {
@@ -23,14 +23,38 @@ const HomePage = () => {
         </div>
         
         {/* icon + text area  */}
-        <div className='flex gap-20'>
-          <div className='w-14 h-14 bg-[#2898D4] rounded-xl'></div>
-          <div className='w-14 h-14 bg-[#2BCD7F] rounded-xl'></div>
-          <div className='w-14 h-14 bg-[#E862C0] rounded-xl'></div>
-          <div className='w-14 h-14 bg-[#FB7D28] rounded-xl'></div>
-        </div>
-    </div>
+        <div className='flex gap-20 '>
 
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 bg-[#2BCD7F] rounded-xl flex items-center justify-center">
+            <BookOpen color="white" size={32} />
+          </div>
+            <span className="mt-2 text-center">hello</span>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 bg-[#2898D4] rounded-xl flex items-center justify-center">
+            <Users color="white" size={32} />
+          </div>
+            <span className="mt-2 text-center">hello</span>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 bg-[#E862C0] rounded-xl flex items-center justify-center">
+            <Award color="white" size={32} />
+          </div>
+            <span className="mt-2 text-center">hello</span>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 bg-[#FB7D28] rounded-xl flex items-center justify-center">
+            <Star color="white" size={32} />
+          </div>
+            <span className="mt-2 text-center">hello</span>
+        </div>
+      </div>
+      
+    </div>
 
 
     </div>
