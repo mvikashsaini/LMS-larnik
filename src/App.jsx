@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import CourseCard from './components/Coursecard'
 import HomePage from './pages/HomePage'
+import SearchBar from './components/SearchBar'
 
 
 function App() {
@@ -14,10 +15,12 @@ function App() {
   <>
     <Navbar />
     <HomePage />
+    <SearchBar />
     <div className='flex bg-white'>
     <CourseCard /><CourseCard /><CourseCard />
     <CourseCard />
     </div>
+    
   </>
   
   )
