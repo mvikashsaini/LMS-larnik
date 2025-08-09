@@ -1,6 +1,7 @@
 // src/pages/Home.jsx
 import { ArrowRight, Award, BookOpen, Play, Star, User, Users } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
+import AboutPage from './AboutPage';
 
 const HomePage = () => {
 
@@ -126,7 +127,7 @@ const HomePage = () => {
 </div>
   </div>
 </div>
-
+<AboutPage />
     </>
   );
 };

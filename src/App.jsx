@@ -8,7 +8,7 @@ import HomePage from './pages/HomePage'
 import SearchBar from './components/SearchBar'
 import Footer from './components/FooterBar'
 import FooterBar from './components/FooterBar'
-import AboutPage from './pages/AboutPage'
+// import AboutPage from './pages/AboutPage'
 
 
 function App() {
@@ -17,14 +17,14 @@ function App() {
   return (
   <>
     <Navbar />
-    <AboutPage />
-    {/* <HomePage />
+    {/* <AboutPage /> */}
+    <HomePage />
     <SearchBar />
     <div className='flex bg-white'>
     <CourseCard /><CourseCard /><CourseCard />
     <CourseCard />
     </div>
-    <FooterBar /> */}
+    <FooterBar />
     
   </>
   
