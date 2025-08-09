@@ -29,31 +29,35 @@ const HomePage = () => {
           <div className="w-14 h-14 bg-[#2BCD7F] rounded-xl flex items-center justify-center">
             <BookOpen color="white" size={32} />
           </div>
-            <span className="mt-2 text-center">hello</span>
+            <h1 className='text-black font-bold text-2xl pt-1'>50K+</h1>
+            <span className="mt-2 text-center font-xs text-gray-500">Active Learners</span>
         </div>
 
         <div className="flex flex-col items-center">
           <div className="w-14 h-14 bg-[#2898D4] rounded-xl flex items-center justify-center">
             <Users color="white" size={32} />
           </div>
-            <span className="mt-2 text-center">hello</span>
+            <h1 className='text-black font-bold text-2xl pt-1'>1.2k+</h1>
+            <span className="mt-2 text-center font-xs text-gray-500">Expert Courses</span>
         </div>
 
         <div className="flex flex-col items-center">
           <div className="w-14 h-14 bg-[#E862C0] rounded-xl flex items-center justify-center">
             <Award color="white" size={32} />
           </div>
-            <span className="mt-2 text-center">hello</span>
+            <h1 className='text-black font-bold text-2xl pt-1'>95%</h1>
+            <span className="mt-2 text-center font-xs text-gray-500">Success Rate</span>
         </div>
 
         <div className="flex flex-col items-center">
           <div className="w-14 h-14 bg-[#FB7D28] rounded-xl flex items-center justify-center">
             <Star color="white" size={32} />
           </div>
-            <span className="mt-2 text-center">hello</span>
+            <h1 className='text-black font-bold text-2xl pt-1'>4.9</h1>
+            <span className="mt-2 text-center font-xs text-gray-500">Rating</span>
         </div>
       </div>
-      
+
     </div>
 
 
