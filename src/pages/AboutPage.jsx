@@ -1,4 +1,4 @@
-import { Stars } from "lucide-react";
+import { Stars, Users } from "lucide-react";
 import React from "react";
 
 export default function AboutPage() {
@@ -21,8 +21,23 @@ export default function AboutPage() {
             </div>
         </div>
 
-        <div className="">
-            <span className="text-black">We're on a mission to democratize quality education and empower learners worldwide through innovative technology and exceptional teaching.</span>
+        {/* small text  */}
+        <div className="mt-5">
+            <span className="text-black">We're on a mission to democratize quality education and empower learners worldwide <br /> through innovative technology and exceptional teaching.</span>
+        </div>
+
+        <div className="flex gap-2 justify-center">
+            {/* Card */}
+            <div className="flex justify-center gap-6 mt-10">
+                <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-xl w-64">
+                    <div className="bg-blue-100 p-3 rounded-full">
+                    <Users size={32} color="blue" />
+                    </div>
+                    <p className="text-2xl font-bold text-green-700 mt-3">50k+</p>
+                    <span className="text-sm text-black">Active Students</span>
+                </div>
+            </div>
+
         </div>
         </section>
         </>
