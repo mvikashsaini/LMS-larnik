@@ -93,8 +93,8 @@ const HomePage = () => {
 
         {/* Text */}
         <div>
-          <p className="text-white font-semibold text-sm">Learn Anytime</p>
-          <p className="text-white text-xs opacity-80">Access courses 24/7</p>
+          <p className="text-black font-semibold text-xl">15,847</p>
+          <p className="text-black text-xs opacity-80">Courses Completed Today</p>
         </div>
   </div>
 
@@ -118,8 +118,8 @@ const HomePage = () => {
 
     {/* Text */}
     <div>
-      <h3 className="text-white font-bold text-sm">Learning Hub</h3>
-      <p className="text-white text-xs opacity-80">Your path starts here</p>
+      <h3 className="text-black font-bold text-lg">3,429</h3>
+      <p className="text-black text-xs">Learning Right Now</p>
     </div>
   </div>
 
