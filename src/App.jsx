@@ -6,6 +6,8 @@ import Navbar from './components/Navbar'
 import CourseCard from './components/Coursecard'
 import HomePage from './pages/HomePage'
 import SearchBar from './components/SearchBar'
+import Footer from './components/FooterBar'
+import FooterBar from './components/FooterBar'
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
     <CourseCard /><CourseCard /><CourseCard />
     <CourseCard />
     </div>
+    <FooterBar />
     
   </>
   
