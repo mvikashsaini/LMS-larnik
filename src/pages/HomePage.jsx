@@ -11,6 +11,14 @@ const HomePage = () => {
     
     {/* LEFT SIDE - text area */}
     <div className="text-black text-left pt-10 space-y-6">
+    
+    <div className="absolute top-20 left-30 backdrop-blur-lg bg-white pl-3 pr-3 pt-1 pb-1 rounded-lg flex items-center gap-3 shadow-xl">
+        {/* Text */}
+        <div>
+          <p className="text-green-800 text-xs opacity-80">Revolutionary Learning Platform</p>
+        </div>
+
+  </div>
       <h1 className="text-7xl font-bold">Where You</h1>
       <h1 className="text-7xl font-bold text-green-700">Learn</h1>
       <h1 className="text-7xl font-bold">With larnik</h1>
@@ -77,7 +85,7 @@ const HomePage = () => {
   />
 
   {/* Top rectangle glass block */}
-  <div className="absolute -top-6 -left-6 backdrop-blur-lg bg-white/0 p-4 rounded-xl flex items-center gap-3 shadow-lg border border-white/50 shadow-xl">
+  <div className="absolute -top-6 -left-6 backdrop-blur-lg bg-white/0 p-4 rounded-xl flex items-center gap-3  border border-white/50 shadow-xl">
     {/* Logo */}
     <div className="bg-green-600 w-10 h-10 flex items-center justify-center rounded-3xl">
           <BookOpen color="white" size={22} />
