@@ -6,7 +6,7 @@ export default function SearchBar() {
       <Search className="text-green-500 mr-2" />
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Search...."
         className="w-full outline-none bg-white text-black"
       />
     </div>
