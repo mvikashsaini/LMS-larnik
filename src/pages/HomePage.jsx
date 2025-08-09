@@ -1,5 +1,5 @@
 // src/pages/Home.jsx
-import { ArrowRight, Award, BookOpen, Play, Star, Users } from 'lucide-react';
+import { ArrowRight, Award, BookOpen, Play, Star, User, Users } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 
 const HomePage = () => {
@@ -77,14 +77,44 @@ const HomePage = () => {
   />
 
   {/* Top rectangle glass block */}
-  <div className="absolute top-4 left-4 bg-white/20 backdrop-blur-lg p-4 rounded-xl shadow-lg">
-    <p className="text-white font-semibold">Top Glass Block</p>
+  <div className="absolute -top-6 -left-6 backdrop-blur-lg bg-white/0 p-4 rounded-xl flex items-center gap-3 shadow-lg border border-white/50 shadow-xl">
+    {/* Logo */}
+    <div className="bg-green-600 w-10 h-10 flex items-center justify-center rounded-3xl">
+          <BookOpen color="white" size={22} />
+        </div>
+
+        {/* Text */}
+        <div>
+          <p className="text-white font-semibold text-sm">Learn Anytime</p>
+          <p className="text-white text-xs opacity-80">Access courses 24/7</p>
+        </div>
   </div>
 
   {/* Bottom rectangle glass block */}
-  <div className="absolute bottom-4 right-4 bg-white/20 backdrop-blur-lg p-4 rounded-xl shadow-lg">
-    <p className="text-white font-semibold">Bottom Glass Block</p>
+  <div className="absolute -bottom-6 right-6 backdrop-blur-lg bg-white/0 p-4 rounded-xl flex items-center gap-3 shadow-lg border border-white/20">
+    {/* Intersecting Logos */}
+    <div className="relative w-32 h-10">
+      <div className="absolute left-0 w-10 h-10 bg-green-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+        <User color="white" size={20} />
+      </div>
+      <div className="absolute left-8 w-10 h-10 bg-[#DF44BD] rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+        <Users color="white" size={20} />
+      </div>
+      <div className="absolute left-16 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+        <Users color="white" size={20} />
+      </div>
+      <div className="absolute left-24 w-10 h-10 bg-[#DF44BD] rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+        <Users color="white" size={20} />
+      </div>
+    </div>
+
+    {/* Text */}
+    <div>
+      <h3 className="text-white font-bold text-sm">Learning Hub</h3>
+      <p className="text-white text-xs opacity-80">Your path starts here</p>
+    </div>
   </div>
+
 </div>
   </div>
 </div>
