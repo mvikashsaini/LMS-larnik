@@ -2,7 +2,7 @@ import React from "react";
 const CourseCard = ({ course }) => {
     return (
      <>
-     <div className="w-80 h-auto mx-auto m-10  bg-white rounded-2xl">
+     <div className="w-80 h-auto mx-auto m-10  bg-white rounded-2xl shadow-2xl">
         {/* course image  */}
       <img
         className="rounded-t-xl w-full h-48" src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop"/>

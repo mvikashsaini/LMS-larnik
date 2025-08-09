@@ -14,7 +14,10 @@ function App() {
   <>
     <Navbar />
     <HomePage />
+    <div className='flex bg-white'>
+    <CourseCard /><CourseCard /><CourseCard />
     <CourseCard />
+    </div>
   </>
   
   )
