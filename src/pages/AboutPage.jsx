@@ -1,4 +1,4 @@
-import { Award, BookOpen, Brain, Globe, Stars, Users } from "lucide-react";
+import { Award, BookOpen, Brain, Globe, Rocket, Stars, Trophy, Users } from "lucide-react";
 import React from "react";
 
 export default function AboutPage() {
@@ -70,7 +70,12 @@ export default function AboutPage() {
             </div>
         </div>
 
-        <div className="pt-20">
+        
+        </section>
+
+        <section className=" bg-slate-300 py-16 px-16">
+        <div className="mt-20 grid grid-cols-2 gap-8 items-center">
+           {/* left side  */}
             <div>
                 {/* brain icon + text  */}
                 <div className="w-32 bg-blue-100 flex items-center gap-2 justify-center p-1 rounded-full shadow-sm">
@@ -79,13 +84,35 @@ export default function AboutPage() {
                 </div>
 
                 {/* text area  */}
-                <div>
-                    <h1 className="text-black font-bold text-3xl">Reimagining Education for the Digital Age</h1>
-                    <span className="text-black">Founded in 2020 by a team of passionate educators and technologists, Larnik emerged from a simple observation: traditional education wasn't keeping pace with the rapidly evolving world.
-We believed that learning should be accessible, engaging, and tailored to individual needs. This vision drove us to create a platform that combines cutting-edge technology with proven pedagogical principles.
-Today, we're proud to serve over 50,000 students across 150+ countries, offering world-class education that adapts to each learner's unique journey.</span>
+                <div className="mt-5">
+                    <h1 className="text-black font-bold text-3xl text-left">Reimagining Education for the Digital Age</h1>
+                    <p className="text-gray-500 text-left text-sm/6 pt-4 flex gap-5">Founded in 2020 by a team of passionate educators and technologists,
+                         Larnik emerged from a simple observation: traditional education wasn't keeping pace with the rapidly evolving world. <br  /><br />
+                        We believed that learning should be accessible, engaging, and tailored to individual needs. 
+                        This vision drove us to create a platform that combines cutting-edge technology with proven pedagogical principles. <br /><br />
+                        Today, we're proud to serve over 50,000 students across 150+ countries, offering world-class education that adapts to each learner's unique journey.</p>
+                </div>
+
+                {/* button area  */}
+                <div className="flex gap-3  pt-14">
+                    <button className=" shadow-2xl rounded-lg w-36 bg-green-500 text-sm flex gap-1 items-center justify-center "><Rocket color="white" size={16}/>Join Our Mission</button>
+                    <button className="pt-1 pb-1 shadow-lg rounded-xl w-32 bg-white text-black text-sm">Read Our Blog</button>
                 </div>
             </div>
+
+            {/* right side  */}
+            <div className="relative w-fit">
+                <img className="object-cover rounded-xl w-[600px] h-[300px]"
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=center"/>
+
+                {/* Glass container */}
+                <div className="flex gap-4 absolute -bottom-6 -right-6 bg-white/30 backdrop-blur-md border border-white/20 rounded-lg p-4 shadow-lg w-64">
+                    <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center"><Trophy color="white"/></div>
+                    <div><h3 className="text-left text-lg font-semibold text-white">98% Success</h3>
+                    <p className="text-sm text-left  text-white/80">Rate Student Satisfaction</p></div>
+                </div>
+            </div>
+
         </div>
         </section>
         </>
