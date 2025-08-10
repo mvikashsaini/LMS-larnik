@@ -11,6 +11,9 @@ import FooterBar from './components/FooterBar'
 import AboutPage from './pages/AboutPage'
 import TimelineCard from './components/TimelineCard'
 import DiscountBar from './components/DiscountBar'
+import TrustedPatner from './components/TrustedPatner'
+import SubscriptionPlans from './components/SubscriptionPlans'
+import DownloadApp from './components/DownloadApp'
 
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
     <FooterBar />
     <TimelineCard />
     <DiscountBar />
+    <TrustedPatner />
+    <SubscriptionPlans />
+    <DownloadApp />
     
   </>
   
