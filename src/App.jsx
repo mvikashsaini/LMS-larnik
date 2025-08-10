@@ -14,6 +14,7 @@ import DiscountBar from './components/DiscountBar'
 import TrustedPatner from './components/TrustedPatner'
 import SubscriptionPlans from './components/SubscriptionPlans'
 import DownloadApp from './components/DownloadApp'
+import WhatsappButton from './components/WhatsappButoon'
 
 
 function App() {
@@ -23,18 +24,19 @@ function App() {
   <>
     <Navbar />
     <SearchBar />
+    <HomePage />
     <AboutPage />
-    {/* <HomePage /> */}
-    {/* <div className='flex bg-white'>
+    <div className='flex bg-white'>
     <CourseCard /><CourseCard /><CourseCard />
     <CourseCard />
-    </div> */}
-    <FooterBar />
+    </div>
     <TimelineCard />
     <DiscountBar />
     <TrustedPatner />
     <SubscriptionPlans />
     <DownloadApp />
+    <FooterBar />
+    <WhatsappButton />
     
   </>
   
