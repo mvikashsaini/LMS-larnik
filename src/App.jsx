@@ -10,6 +10,7 @@ import Footer from './components/FooterBar'
 import FooterBar from './components/FooterBar'
 import AboutPage from './pages/AboutPage'
 import TimelineCard from './components/TimelineCard'
+import DiscountBar from './components/DiscountBar'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
     </div> */}
     <FooterBar />
     <TimelineCard />
+    <DiscountBar />
     
   </>
   
