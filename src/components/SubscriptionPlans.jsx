@@ -64,7 +64,7 @@ export default function SubscriptionPlans() {
                 ))}
               </ul>
               <h1 className="text-green-600">{plan.trail}</h1>
-              <button className='mt-6 w-full py-2 rounded-lg font-medium bg-green-800 w-24'>Subscribe</button>
+              <button className='mt-6 py-2 rounded-lg font-medium bg-green-800 w-24'>Subscribe</button>
             </div>
           ))}
         </div>
