@@ -9,6 +9,7 @@ export default function CardDesign({
     bgColor = "bg-white",
     shadow = "shadow-2xl",
     // for image 
+    // hsdvkjfhsakj
 }) 
 {
 
