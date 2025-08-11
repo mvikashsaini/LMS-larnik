@@ -9,7 +9,6 @@ const data1  = "text-center"
 
     return (
         <>
-        <CardDesign name ={props.name2} />
         <section className="bg-gray-50 py-16 px-16">
             {/* top text icon  */}
         <div className="bg-lime-100 w-64 mx-auto pt-1 pb-1 rounded-full shadow-xl">
