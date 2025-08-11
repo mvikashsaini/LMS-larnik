@@ -153,6 +153,7 @@ const data1  = "text-center"
                     <span className="text-base p-2 text-gray-600">Democratizing quality education and making learning accessible to everyone, everywhere.</span>
                 </div>
             
+            
             </div>
         </div>
 
