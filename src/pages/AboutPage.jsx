@@ -1,7 +1,10 @@
-import { Award, BookOpen, Brain, Globe, Rocket, Stars, Trophy, Users } from "lucide-react";
+import { Award, BookOpen, Brain, Globe, Rocket, Stars, Target, Trophy, Users } from "lucide-react";
 import React from "react";
 
 export default function AboutPage() {
+
+const data1  = "text-center"
+
     return (
         <>
         <section className="bg-gray-50 py-16 px-16">
@@ -115,6 +118,83 @@ export default function AboutPage() {
 
         </div>
         </section>
+
+        {/* cards  */}
+        <div className="p-10 bg-green-100 flex flex-col items-center justify-center gap-5">
+            <div className="w-[580px] mx-auto">
+                <h1 className="text-black font-bold text-3xl ">Our Core Values</h1>
+                <p className="text-black pt-5 font-semibold">The principles that guide everything we do and shape our commitment to learners worldwide.</p>
+            </div>
+
+            <div className="flex flex-row gap-5 flex-wrap">
+                <div className="bg-white h-72 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center">
+                    <Target className="bg-blue-400 w-16 h-16 p-2 rounded-lg"/>
+                    <span className="font-bold text-xl p-4">Misson Driven</span>
+                    <span className="text-base p-2">Democratizing quality education and making learning accessible to everyone, everywhere.</span>
+                </div>
+            
+                <div className="bg-white h-72 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center">
+                    <Target className="bg-blue-400 w-16 h-16 p-2 rounded-lg"/>
+                    <span className="font-bold text-xl p-4">Misson Driven</span>
+                    <span className="text-base p-2">Democratizing quality education and making learning accessible to everyone, everywhere.</span>
+                </div>
+
+                <div className="bg-white h-72 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center">
+                    <Target className="bg-blue-400 w-16 h-16 p-2 rounded-lg"/>
+                    <span className="font-bold text-xl p-4">Misson Driven</span>
+                    <span className="text-base p-2">Democratizing quality education and making learning accessible to everyone, everywhere.</span>
+                </div>
+
+                <div className="bg-white h-72 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center">
+                    <Target className="bg-blue-400 w-16 h-16 p-2 rounded-lg"/>
+                    <span className="font-bold text-xl p-4">Misson Driven</span>
+                    <span className="text-base p-2">Democratizing quality education and making learning accessible to everyone, everywhere.</span>
+                </div>
+            
+            </div>
+        </div>
+
+        {/* team crads  */}
+        <div className="p-10 bg-green-300 flex flex-col items-center justify-center gap-5">
+            <div className="w-[580px] mx-auto">
+                <h1 className="text-black font-bold text-3xl ">Meet Our Team</h1>
+                <p className="text-gray-500 pt-5 font-semibold">The passionate individuals behind Larnik's mission to transform education.</p>
+            </div>
+    
+            <div className="flex flex-row gap-5 flex-wrap">
+                <div className="bg-white h-80 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-2">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" className="w-28 h-28 p-2 rounded-full" />
+                    <span className="font-bold text-xl p-2">Michael Chen</span>
+                    <span className="text-xs font-thin bg-green-100 py-0.5 px-2 rounded-full">CTO & Co-Founder</span>
+                    <span className="text-xs p-2">Technology leader who previously built learning platforms for millions of students.</span>
+                    <button className="border-black py-0.5 px-1 text-sm">Connect</button>
+                </div>
+
+                <div className="bg-white h-80 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-2">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" className="w-28 h-28 p-2 rounded-full" />
+                    <span className="font-bold text-xl p-2">Michael Chen</span>
+                    <span className="text-xs font-thin bg-green-100 py-0.5 px-2 rounded-full">CTO & Co-Founder</span>
+                    <span className="text-xs p-2">Technology leader who previously built learning platforms for millions of students.</span>
+                    <button className="border-black py-0.5 px-1 text-sm">Connect</button>
+                </div>
+                
+                <div className="bg-white h-80 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-2">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" className="w-28 h-28 p-2 rounded-full" />
+                    <span className="font-bold text-xl p-2">Michael Chen</span>
+                    <span className="text-xs font-thin bg-green-100 py-0.5 px-2 rounded-full">CTO & Co-Founder</span>
+                    <span className="text-xs p-2">Technology leader who previously built learning platforms for millions of students.</span>
+                    <button className="border-black py-0.5 px-1 text-sm">Connect</button>
+                </div>
+
+                <div className="bg-white h-80 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-2">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" className="w-28 h-28 p-2 rounded-full" />
+                    <span className="font-bold text-xl p-2">Michael Chen</span>
+                    <span className="text-xs font-thin bg-green-100 py-0.5 px-2 rounded-full">CTO & Co-Founder</span>
+                    <span className="text-xs p-2">Technology leader who previously built learning platforms for millions of students.</span>
+                    <button className="border-black py-0.5 px-1 text-sm">Connect</button>
+                </div>
+            </div>
+        </div>
         </>
     );
     
