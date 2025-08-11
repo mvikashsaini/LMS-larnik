@@ -42,10 +42,8 @@ function App() {
     <DownloadApp />
     <FooterBar />
     <WhatsappButton />
-
-
    <div className='bg-green-200 p-20'><CardDesign/></div> 
-   <AboutPage name2={name2} />
+  
   </>
   
   )
