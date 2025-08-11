@@ -24,6 +24,7 @@ export default function TimelineCard() {
     
   ];
 
+
   return (
     <section>
       {ArrayData.map((item, index) => {

@@ -1,12 +1,15 @@
-import { Award, BookOpen, Brain, Globe, Rocket, Stars, Target, Trophy, Users } from "lucide-react";
+import { Award, BookOpen, Brain, Globe, GuitarIcon, Rocket, Stars, Target, Trophy, Users } from "lucide-react";
 import React from "react";
+import CourseCard from "../components/Coursecard";
+import CardDesign from "../components/CradDesign";
 
-export default function AboutPage() {
+export default function AboutPage(props) {
 
 const data1  = "text-center"
 
     return (
         <>
+        <CardDesign name ={props.name2} />
         <section className="bg-gray-50 py-16 px-16">
             {/* top text icon  */}
         <div className="bg-lime-100 w-64 mx-auto pt-1 pb-1 rounded-full shadow-xl">
@@ -160,7 +163,8 @@ const data1  = "text-center"
                 <h1 className="text-black font-bold text-3xl ">Meet Our Team</h1>
                 <p className="text-gray-500 pt-5 font-semibold">The passionate individuals behind Larnik's mission to transform education.</p>
             </div>
-    
+
+            <CourseCard />
             <div className="flex flex-row gap-5 flex-wrap">
                 <div className="bg-white h-80 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-2">
                     <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" className="w-28 h-28 p-2 rounded-full" />

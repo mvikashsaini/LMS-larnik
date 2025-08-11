@@ -15,14 +15,19 @@ import TrustedPatner from './components/TrustedPatner'
 import SubscriptionPlans from './components/SubscriptionPlans'
 import DownloadApp from './components/DownloadApp'
 import WhatsappButton from './components/WhatsappButoon'
+import CardDesign from './components/CradDesign'
 
 
 function App() {
   const [count, setCount] = useState(0)
 
+  const name2 = "Vikas";
+  const name3 = "Bhadu";
+
+
   return (
   <>
-    <Navbar />
+    {/* <Navbar />
     <SearchBar />
     <HomePage />
     <AboutPage />
@@ -36,8 +41,11 @@ function App() {
     <SubscriptionPlans />
     <DownloadApp />
     <FooterBar />
-    <WhatsappButton />
-    
+    <WhatsappButton /> */}
+
+
+   <CardDesign n1={name2} name3={name3} /> 
+   <AboutPage name2={name2} />
   </>
   
   )
