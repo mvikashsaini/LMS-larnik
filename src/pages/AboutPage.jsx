@@ -6,6 +6,13 @@ import CardDesign from "../components/CradDesign";
 export default function AboutPage(props) {
 
 const data1  = "text-center"
+const img = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face"
+const name = "Michael Chen"
+const subTitle = "CTO & Co-Founder"
+const description = "Technology leader who previously built learning platforms for millions of students."
+const coreTitle = "Misson Driven"
+const coreDes = "Democratizing quality education and making learning accessible to everyone, everywhere."
+const coreIcon = Target
 
     return (
         <>
@@ -129,30 +136,12 @@ const data1  = "text-center"
             </div>
 
             <div className="flex flex-row gap-5 flex-wrap">
-                <div className="bg-white h-72 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center">
-                    <Target className="bg-blue-400 w-16 h-16 p-2 rounded-lg"/>
-                    <span className="font-bold text-xl p-4">Misson Driven</span>
-                    <span className="text-base p-2">Democratizing quality education and making learning accessible to everyone, everywhere.</span>
-                </div>
-            
-                <div className="bg-white h-72 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center">
-                    <Target className="bg-blue-400 w-16 h-16 p-2 rounded-lg"/>
-                    <span className="font-bold text-xl p-4">Misson Driven</span>
-                    <span className="text-base p-2">Democratizing quality education and making learning accessible to everyone, everywhere.</span>
-                </div>
-
-                <div className="bg-white h-72 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center">
-                    <Target className="bg-blue-400 w-16 h-16 p-2 rounded-lg"/>
-                    <span className="font-bold text-xl p-4">Misson Driven</span>
-                    <span className="text-base p-2">Democratizing quality education and making learning accessible to everyone, everywhere.</span>
-                </div>
-
-                <div className="bg-white h-72 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center">
-                    <Target className="bg-blue-400 w-16 h-16 p-2 rounded-lg"/>
-                    <span className="font-bold text-xl p-4">Misson Driven</span>
-                    <span className="text-base p-2">Democratizing quality education and making learning accessible to everyone, everywhere.</span>
-                </div>
-            
+            <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/>
+            <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/>
+            <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/>
+            <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/>
+            <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/>
+            <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/>
             </div>
         </div>
 
@@ -165,37 +154,12 @@ const data1  = "text-center"
 
             <CourseCard />
             <div className="flex flex-row gap-5 flex-wrap">
-                <div className="bg-white h-80 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-2">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" className="w-28 h-28 p-2 rounded-full" />
-                    <span className="font-bold text-xl p-2">Michael Chen</span>
-                    <span className="text-xs font-thin bg-green-100 py-0.5 px-2 rounded-full">CTO & Co-Founder</span>
-                    <span className="text-xs p-2">Technology leader who previously built learning platforms for millions of students.</span>
-                    <button className="border-black py-0.5 px-1 text-sm">Connect</button>
-                </div>
-
-                <div className="bg-white h-80 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-2">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" className="w-28 h-28 p-2 rounded-full" />
-                    <span className="font-bold text-xl p-2">Michael Chen</span>
-                    <span className="text-xs font-thin bg-green-100 py-0.5 px-2 rounded-full">CTO & Co-Founder</span>
-                    <span className="text-xs p-2">Technology leader who previously built learning platforms for millions of students.</span>
-                    <button className="border-black py-0.5 px-1 text-sm">Connect</button>
-                </div>
-                
-                <div className="bg-white h-80 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-2">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" className="w-28 h-28 p-2 rounded-full" />
-                    <span className="font-bold text-xl p-2">Michael Chen</span>
-                    <span className="text-xs font-thin bg-green-100 py-0.5 px-2 rounded-full">CTO & Co-Founder</span>
-                    <span className="text-xs p-2">Technology leader who previously built learning platforms for millions of students.</span>
-                    <button className="border-black py-0.5 px-1 text-sm">Connect</button>
-                </div>
-
-                <div className="bg-white h-80 w-64 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-2">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" className="w-28 h-28 p-2 rounded-full" />
-                    <span className="font-bold text-xl p-2">Michael Chen</span>
-                    <span className="text-xs font-thin bg-green-100 py-0.5 px-2 rounded-full">CTO & Co-Founder</span>
-                    <span className="text-xs p-2">Technology leader who previously built learning platforms for millions of students.</span>
-                    <button className="border-black py-0.5 px-1 text-sm">Connect</button>
-                </div>
+                <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
+                <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
+                <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
+                <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
+                <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
+                <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
             </div>
         </div>
         </>
