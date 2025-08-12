@@ -3,7 +3,7 @@ import { ArrowRight, Award, BookOpen, Play, Star, User, Users } from 'lucide-rea
 import React, { useState, useEffect } from 'react';
 import AboutPage from './AboutPage';
 
-const HomePage = () => {
+export default function HomePage  (){
 
   return (
     <>
@@ -131,4 +131,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+

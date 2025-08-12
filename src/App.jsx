@@ -18,6 +18,8 @@ import WhatsappButton from './components/WhatsappButoon'
 import CardDesign from './components/CradDesign'
 import LogIn from './pages/Login'
 import SignUp from './pages/SignUp'
+import ContactPage from './pages/ContactPage'
+import CoursePage from './components/CoursePage'
 
 
 function App() {
@@ -47,6 +49,9 @@ function App() {
     <LogIn />
     <SignUp />
    <div className='bg-green-200 p-20'><CardDesign/></div> 
+   <ContactPage /> 
+   <CoursePage />
+
   </>
   
   )
