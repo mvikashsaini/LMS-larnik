@@ -100,8 +100,8 @@ export default function SignUp() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-800 to-green-800 p-6">
-      <div className="w-full max-w-xl bg-blue/50 backdrop-blur-md rounded-2xl shadow-lg p-8">
+    <div className="min-h-screen flex items-center justify-center bg-green-400 p-6">
+      <div className="w-full max-w-xl bg-blue/50 backdrop-blur-md rounded-2xl shadow-lg p-8 bg-white ">
         <h2 className="text-2xl font-semibold mb-1">Create an account</h2>
         <p className="text-sm text-gray-500 mb-6">Choose your role and sign up to access the Larnik platform.</p>
 
