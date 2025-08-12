@@ -64,6 +64,16 @@ export default function LogIn() {
               className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"
               required/>
           </div>
+          
+          {/* phone  */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              phone
+            </label>
+            <input type="phone" name="phone" placeholder="Enter your phone" value={formData.email} onChange={handleChange}
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring focus:ring-blue-200 focus:outline-none"
+              required/>
+          </div>
 
           {/* Password */}
           <div>
