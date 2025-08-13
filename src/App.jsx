@@ -20,6 +20,7 @@ import LogIn from './pages/Login'
 import SignUp from './pages/SignUp'
 import ContactPage from './pages/ContactPage'
 import CoursePage from './components/CoursePage'
+import AdminPage from './pages/AdminPage'
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
 
   return (
   <>
-    <Navbar />
+    {/* <Navbar />
     <SearchBar />
     <HomePage />
     <AboutPage />
@@ -50,7 +51,8 @@ function App() {
     <SignUp />
    <div className='bg-green-200 p-20'><CardDesign/></div> 
    <ContactPage /> 
-   <CoursePage />
+   <CoursePage /> */}
+   <AdminPage />
 
   </>
   
