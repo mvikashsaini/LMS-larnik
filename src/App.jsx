@@ -16,6 +16,10 @@ import SubscriptionPlans from './components/SubscriptionPlans'
 import DownloadApp from './components/DownloadApp'
 import WhatsappButton from './components/WhatsappButoon'
 import CardDesign from './components/CradDesign'
+import LogIn from './pages/Login'
+import SignUp from './pages/SignUp'
+import ContactPage from './pages/ContactPage'
+import CoursePage from './components/CoursePage'
 
 
 function App() {
@@ -42,10 +46,12 @@ function App() {
     <DownloadApp />
     <FooterBar />
     <WhatsappButton />
-
-
+    <LogIn />
+    <SignUp />
    <div className='bg-green-200 p-20'><CardDesign/></div> 
-   <AboutPage name2={name2} />
+   <ContactPage /> 
+   <CoursePage />
+
   </>
   
   )

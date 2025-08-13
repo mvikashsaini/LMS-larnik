@@ -1,4 +1,5 @@
 import React from "react";
+import CardDesign from "./CradDesign";
 
 export default function SubscriptionPlans() {
   const plans = [
@@ -52,22 +53,12 @@ export default function SubscriptionPlans() {
         {/* Cards */}
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {plans.map((plan, index) => (
-
-            <div key={index} className='rounded-xl shadow-lg p-6 border bg-white transition-all '>
-              <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
-              <p className="mt-4 text-4xl font-bold text-green-800">₹{plan.price}
-                <span className="text-xl font-bold text-green-800">/{plan.period}</span>
-              </p>
-              <ul className="mt-6 space-y-3 text-gray-600">
-                {plan.features.map((feature, i) => (
-                  <li key={i}>{feature}</li>
-                ))}
-              </ul>
-              <h1 className="text-green-600">{plan.trail}</h1>
-              <button className='mt-6 py-2 rounded-lg font-medium bg-green-800 w-24'>Subscribe</button>
+            <div key={index}>
+              <CardDesign variant="subscribe" width="w-[300px]" height="h-96" title={plan.price + '/' + plan.period} subsTitle={plan.name} description={plan.features.map((feature, i) => (<li key={i}>{feature}</li>))} btnName="Subscribe"/>
             </div>
           ))}
         </div>
+        
       </div>
     </section>
   );
