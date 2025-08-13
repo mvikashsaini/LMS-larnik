@@ -32,7 +32,7 @@ function App() {
   return (
   <>
     <Navbar />
-    {/* <SearchBar />
+    <SearchBar />
     <HomePage />
     <AboutPage />
     <div className='flex bg-white'>
@@ -49,10 +49,9 @@ function App() {
     <LogIn />
     <SignUp />
    <div className='bg-green-200 p-20'><CardDesign/></div> 
-
-   <ContactPage /> */}
+   <ContactPage /> 
    <CoursePage />
-  
+
   </>
   
   )
