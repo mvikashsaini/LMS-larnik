@@ -12,6 +12,7 @@ export default function CoursePage() {
                     <span>Programming</span>
                     <span>Beginner to Advanced</span>
                     <span>English</span>
+                    
                 </div>
             </div>
 
