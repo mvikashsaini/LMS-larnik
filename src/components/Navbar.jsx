@@ -4,7 +4,7 @@ import { BookOpen } from "lucide-react";
 export default function Navbar() {
   return (
     <header className="w-full bg-white/40 shadow sticky top-0 z-50 backdrop-blur-md">
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 shadow-xl">
+      <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 shadow-[-0px_20px_22px_-15px_rgba(0,0,0,0.1)]">
         {/* Logo */}
         <div className="flex items-center space-x-2 ml-40">
           <div className="bg-green-700 text-white p-2 rounded-xl">
