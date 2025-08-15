@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Eye, X, Check, Star, Users } from "lucide-react";
+import { Eye, X, Check, Star, Users, BookOpen, Play, Clock, DollarSign } from "lucide-react";
+import UserManagementCardDesign from "../UserManagementCardDesign";
 
 export default function CourseManagement() {
   // State for active tab
@@ -85,7 +86,41 @@ export default function CourseManagement() {
     { name: "Data Science", count: 31 },
     { name: "Mobile Development", count: 39 },
     { name: "Business", count: 51 },
-  ];
+  ]
+
+  const studentCards = [
+    {
+      title : "Total Courses",
+      icon : BookOpen,
+      subTitle : "+12 This month",
+      value : "189",
+    },
+    {
+      title : "Active",
+      icon : Play,
+      subTitle : "5.2% active rate",
+      value : "156",
+    },
+    {
+      title : "Pending Review",
+      icon : Clock,
+      subTitle : "Awaiting Approwal",
+      value : "8",
+    },
+    {
+      title : "Total Revenue",
+      icon : DollarSign,
+      subTitle : "+18% this month",
+      value : "$357k",
+    },
+    {
+      title : "Avg Rating",
+      icon : Star,
+      subTitle : "Across all courses",
+      value : "4.6",
+    },
+  ]
+
 
   // Filter for pending courses
   const pendingCourses = [];
@@ -105,6 +140,14 @@ export default function CourseManagement() {
 
   return (
     <div className="p-6 bg-gray-50 min-h-screen">
+      {/* cards view  */}
+              <div className="flex flex-row gap-5 w-[full]   p-5">
+                              {studentCards.map((studentCard, index) => (
+                                      <UserManagementCardDesign key={index} title={studentCard.title} subTitle={studentCard.subTitle} icon={studentCard.icon} value={studentCard.value} />
+                                      
+                                    ))}
+                              </div>
+              {/* cards view  */}
       {/* Tab buttons */}
       <div className="flex space-x-2 bg-gray-100 rounded-full p-1 w-fit mb-6">
         {tabs.map((tab) => (
