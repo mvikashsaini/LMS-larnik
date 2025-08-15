@@ -20,7 +20,8 @@ import {
   AlertTriangle,
   UserCheck,
   UserX,
-  Plus
+  Plus,
+  Import
 } from "lucide-react";
 import SearchBar from "./SearchBar";
 import DashboardCard from "./DashboardCard";
@@ -28,6 +29,8 @@ import { div } from "framer-motion/client";
 import AlertCard from "./AlertCard";
 import UserManagementCardDesign from "./UserManagementCardDesign";
 import UserManagementListDesign from "./UserManagementListDesign";
+import CourseManagement from "./dashboard omponents/CourseManagement";
+import NotificationManagement from "./dashboard omponents/NotificationManagement";
 
 // Sidebar menu structure
 const menuItems = [
@@ -321,7 +324,7 @@ export default function AdminDashboard () {
       </div>
 
       {/* Dynamic Content Area */}
-      <div className="flex flex-col overflow-y-auto bg-pink-500 w-full items-center">
+      <div className="flex flex-col overflow-y-auto  w-full items-center">
         {/* dynamic top bar  */}
       <div className="bg-white w-full h-16 flex items-center justify-between px-7">
             <div>
@@ -366,34 +369,7 @@ export default function AdminDashboard () {
           {activeItem === "Students" && (
               <div className="flex w-full flex-col">
 {/*debug colour */}
-                <div className=" w-full  flex gap-5 p-5">
-                    
-                    {/* aletr system */}
-                    <div className=" shadow-2xl h-[480px] w-full rounded-2xl flex flex-col p-5 gap-2">
-                      <div className="flex items-center justify-start gap-2">
-                        <AlertTriangle />
-                        <span className="font-bold"> System Alerts</span>
-                      </div>
-                      <div className="flex flex-col w-full h-full  rounded-xl items-center p-2 gap-2 overflow-y-auto">
-                        {alerts.map((alert, index) => (
-                        <AlertCard key={index} title={alert.title} btn_name={alert.btn_name} subtitle={alert.subtitle} data={alert.data}/>
-                        ))}
-                      </div>           
-                    </div>
-      
-                    <div className=" shadow-2xl h-[480px] w-full rounded-2xl flex flex-col p-5 gap-2">
-                      <div className="flex items-center justify-start gap-2">
-                        <AlertTriangle />
-                        <span className="font-bold"> System Alerts</span>
-                      </div>
-                      <div className="flex flex-col w-full h-full  rounded-xl items-center p-2 gap-2 overflow-y-auto">
-                        {alerts.map((alert, index) => (
-                        <AlertCard key={index} title={alert.title} btn_name={alert.btn_name} subtitle={alert.subtitle} data={alert.data}/>
-                        
-                        ))}
-                      </div>           
-                    </div>          
-                </div>
+                
 
                         {/* debug color */}
                 <div className="flex flex-row gap-5 w-[full]   p-5">
@@ -403,12 +379,27 @@ export default function AdminDashboard () {
                 </div>
 
                 <div className="flex flex-col gap-5 w-[98%]  bg-white p-5 rounded-2xl shadow-2xl">
-                  <div className="flex flex-col items-start">
-                    <div className="flex flex-col items-start">
-                      <span className="font-bold">Students List</span>
-                      <span>View and manage all students on your platform</span>
+                  <div className="flex flex-col ">
+                    <div className="flex flex-row justify-between">
+
+                      <div className="flex flex-col items-start">
+                        <span className="font-bold">Students List</span>
+                        <span>View and manage all students on your platform</span>
+                      </div>
+
+                      <div className="flex gap-3">
+                        <button className="bg-white rounded-xl shadow-xl border border-black px-2 py-0.5 h-8 hover:bg-green-600">
+                          Export
+                          </button>
+                        <button className="bg-white rounded-xl shadow-xl border border-black px-2 py-0.5 h-8 hover:bg-green-600">
+                          Add
+                          </button>
+                      </div>
+
                     </div>
-                    <div className="flex gap-10 h-16 items-center">
+                    
+                    <div className="flex">
+                    <div className="flex gap-10 h-16 items-center ">
                       <SearchBar />
                       <div>
                       <select name="" id="" >
@@ -416,6 +407,7 @@ export default function AdminDashboard () {
                         <option value="">pending</option>
                       </select>
                       </div>
+                    </div>
                     </div>
                   </div>
                 <div className="bg-gray-200 flex justify-between items-center text-start p-2 font-bold">
@@ -439,37 +431,262 @@ export default function AdminDashboard () {
           )}
         
           {activeItem === "Teachers" && (
-            <div>
-              <h1 className="text-2xl font-bold mb-4">Teachers</h1>
-              <p>Manage teacher accounts, assignments, and schedules.</p>
-            </div>
+            <div className="flex w-full flex-col">
+            {/*debug colour */}
+                            
+            
+                                    {/* debug color */}
+                            <div className="flex flex-row gap-5 w-[full]   p-5">
+                            {studentCards.map((studentCard, index) => (
+                                    <UserManagementCardDesign key={index} title={studentCard.title} subTitle={studentCard.subTitle} icon={studentCard.icon} value={studentCard.value} />
+                                    ))}
+                            </div>
+            
+                            <div className="flex flex-col gap-5 w-[98%]  bg-white p-5 rounded-2xl shadow-2xl">
+                              <div className="flex flex-col ">
+                                <div className="flex flex-row justify-between">
+            
+                                  <div className="flex flex-col items-start">
+                                    <span className="font-bold">Students List</span>
+                                    <span>View and manage all students on your platform</span>
+                                  </div>
+            
+                                  <div className="flex gap-3">
+                                    <button className="bg-white rounded-xl shadow-xl border border-black px-2 py-0.5 h-8 hover:bg-green-600">
+                                      Export
+                                      </button>
+                                    <button className="bg-white rounded-xl shadow-xl border border-black px-2 py-0.5 h-8 hover:bg-green-600">
+                                      Add
+                                      </button>
+                                  </div>
+            
+                                </div>
+                                
+                                <div className="flex">
+                                <div className="flex gap-10 h-16 items-center ">
+                                  <SearchBar />
+                                  <div>
+                                  <select name="" id="" >
+                                    <option value="">Active</option>
+                                    <option value="">pending</option>
+                                  </select>
+                                  </div>
+                                </div>
+                                </div>
+                              </div>
+                            <div className="bg-gray-200 flex justify-between items-center text-start p-2 font-bold">
+                              <input type="checkbox" />
+                              <span className="w-1/4">Name</span>
+                              <span className="w-1/6">Phone</span>
+                              <span className="w-1/12">Status</span>
+                              <span className="w-1/12">Courses</span>
+                              <span className="w-1/12">Progress</span>
+                              <span className="w-1/12">Last Login</span>
+                              <span className="w-1/12">Actions</span>
+                            </div>
+                            {userLists.map((userList, index) => (
+                                    <UserManagementListDesign key={index} name={userList.name} mail={userList.mail} phone={userList.phone} courses={userList.courses} progress_val={userList.progress_val} last_login={userList.last_login} status_title={userList.status_title} status_colour={userList.status_colour}/>
+                                    ))}
+                          </div> 
+            
+            
+                          </div>
           )}
         
           {activeItem === "University Staff" && (
-            <div>
-              <h1 className="text-2xl font-bold mb-4">University Staff</h1>
-              <p>Manage administrative and operational staff details.</p>
-            </div>
+            <div className="flex w-full flex-col">
+            {/*debug colour */}
+                            
+            
+                                    {/* debug color */}
+                            <div className="flex flex-row gap-5 w-[full]   p-5">
+                            {studentCards.map((studentCard, index) => (
+                                    <UserManagementCardDesign key={index} title={studentCard.title} subTitle={studentCard.subTitle} icon={studentCard.icon} value={studentCard.value} />
+                                    ))}
+                            </div>
+            
+                            <div className="flex flex-col gap-5 w-[98%]  bg-white p-5 rounded-2xl shadow-2xl">
+                              <div className="flex flex-col ">
+                                <div className="flex flex-row justify-between">
+            
+                                  <div className="flex flex-col items-start">
+                                    <span className="font-bold">Students List</span>
+                                    <span>View and manage all students on your platform</span>
+                                  </div>
+            
+                                  <div className="flex gap-3">
+                                    <button className="bg-white rounded-xl shadow-xl border border-black px-2 py-0.5 h-8 hover:bg-green-600">
+                                      Export
+                                      </button>
+                                    <button className="bg-white rounded-xl shadow-xl border border-black px-2 py-0.5 h-8 hover:bg-green-600">
+                                      Add
+                                      </button>
+                                  </div>
+            
+                                </div>
+                                
+                                <div className="flex">
+                                <div className="flex gap-10 h-16 items-center ">
+                                  <SearchBar />
+                                  <div>
+                                  <select name="" id="" >
+                                    <option value="">Active</option>
+                                    <option value="">pending</option>
+                                  </select>
+                                  </div>
+                                </div>
+                                </div>
+                              </div>
+                            <div className="bg-gray-200 flex justify-between items-center text-start p-2 font-bold">
+                              <input type="checkbox" />
+                              <span className="w-1/4">Name</span>
+                              <span className="w-1/6">Phone</span>
+                              <span className="w-1/12">Status</span>
+                              <span className="w-1/12">Courses</span>
+                              <span className="w-1/12">Progress</span>
+                              <span className="w-1/12">Last Login</span>
+                              <span className="w-1/12">Actions</span>
+                            </div>
+                            {userLists.map((userList, index) => (
+                                    <UserManagementListDesign key={index} name={userList.name} mail={userList.mail} phone={userList.phone} courses={userList.courses} progress_val={userList.progress_val} last_login={userList.last_login} status_title={userList.status_title} status_colour={userList.status_colour}/>
+                                    ))}
+                          </div> 
+            
+            
+                          </div>
           )}
         
           {activeItem === "Referral Partners" && (
-            <div>
-              <h1 className="text-2xl font-bold mb-4">Referral Partners</h1>
-              <p>Track and manage referral partner data.</p>
-            </div>
+            <div className="flex w-full flex-col">
+            {/*debug colour */}
+                            
+            
+                                    {/* debug color */}
+                            <div className="flex flex-row gap-5 w-[full]   p-5">
+                            {studentCards.map((studentCard, index) => (
+                                    <UserManagementCardDesign key={index} title={studentCard.title} subTitle={studentCard.subTitle} icon={studentCard.icon} value={studentCard.value} />
+                                    ))}
+                            </div>
+            
+                            <div className="flex flex-col gap-5 w-[98%]  bg-white p-5 rounded-2xl shadow-2xl">
+                              <div className="flex flex-col ">
+                                <div className="flex flex-row justify-between">
+            
+                                  <div className="flex flex-col items-start">
+                                    <span className="font-bold">Students List</span>
+                                    <span>View and manage all students on your platform</span>
+                                  </div>
+            
+                                  <div className="flex gap-3">
+                                    <button className="bg-white rounded-xl shadow-xl border border-black px-2 py-0.5 h-8 hover:bg-green-600">
+                                      Export
+                                      </button>
+                                    <button className="bg-white rounded-xl shadow-xl border border-black px-2 py-0.5 h-8 hover:bg-green-600">
+                                      Add
+                                      </button>
+                                  </div>
+            
+                                </div>
+                                
+                                <div className="flex">
+                                <div className="flex gap-10 h-16 items-center ">
+                                  <SearchBar />
+                                  <div>
+                                  <select name="" id="" >
+                                    <option value="">Active</option>
+                                    <option value="">pending</option>
+                                  </select>
+                                  </div>
+                                </div>
+                                </div>
+                              </div>
+                            <div className="bg-gray-200 flex justify-between items-center text-start p-2 font-bold">
+                              <input type="checkbox" />
+                              <span className="w-1/4">Name</span>
+                              <span className="w-1/6">Phone</span>
+                              <span className="w-1/12">Status</span>
+                              <span className="w-1/12">Courses</span>
+                              <span className="w-1/12">Progress</span>
+                              <span className="w-1/12">Last Login</span>
+                              <span className="w-1/12">Actions</span>
+                            </div>
+                            {userLists.map((userList, index) => (
+                                    <UserManagementListDesign key={index} name={userList.name} mail={userList.mail} phone={userList.phone} courses={userList.courses} progress_val={userList.progress_val} last_login={userList.last_login} status_title={userList.status_title} status_colour={userList.status_colour}/>
+                                    ))}
+                          </div> 
+            
+            
+                          </div>
           )}
         
           {activeItem === "Sub-Admins" && (
-            <div>
-              <h1 className="text-2xl font-bold mb-4">Sub-Admins</h1>
-              <p>Manage sub-admin access and permissions.</p>
-            </div>
+            <div className="flex w-full flex-col">
+            {/*debug colour */}
+                            
+            
+                                    {/* debug color */}
+                            <div className="flex flex-row gap-5 w-[full]   p-5">
+                            {studentCards.map((studentCard, index) => (
+                                    <UserManagementCardDesign key={index} title={studentCard.title} subTitle={studentCard.subTitle} icon={studentCard.icon} value={studentCard.value} />
+                                    ))}
+                            </div>
+            
+                            <div className="flex flex-col gap-5 w-[98%]  bg-white p-5 rounded-2xl shadow-2xl">
+                              <div className="flex flex-col ">
+                                <div className="flex flex-row justify-between">
+            
+                                  <div className="flex flex-col items-start">
+                                    <span className="font-bold">Students List</span>
+                                    <span>View and manage all students on your platform</span>
+                                  </div>
+            
+                                  <div className="flex gap-3">
+                                    <button className="bg-white rounded-xl shadow-xl border border-black px-2 py-0.5 h-8 hover:bg-green-600">
+                                      Export
+                                      </button>
+                                    <button className="bg-white rounded-xl shadow-xl border border-black px-2 py-0.5 h-8 hover:bg-green-600">
+                                      Add
+                                      </button>
+                                  </div>
+            
+                                </div>
+                                
+                                <div className="flex">
+                                <div className="flex gap-10 h-16 items-center ">
+                                  <SearchBar />
+                                  <div>
+                                  <select name="" id="" >
+                                    <option value="">Active</option>
+                                    <option value="">pending</option>
+                                  </select>
+                                  </div>
+                                </div>
+                                </div>
+                              </div>
+                            <div className="bg-gray-200 flex justify-between items-center text-start p-2 font-bold">
+                              <input type="checkbox" />
+                              <span className="w-1/4">Name</span>
+                              <span className="w-1/6">Phone</span>
+                              <span className="w-1/12">Status</span>
+                              <span className="w-1/12">Courses</span>
+                              <span className="w-1/12">Progress</span>
+                              <span className="w-1/12">Last Login</span>
+                              <span className="w-1/12">Actions</span>
+                            </div>
+                            {userLists.map((userList, index) => (
+                                    <UserManagementListDesign key={index} name={userList.name} mail={userList.mail} phone={userList.phone} courses={userList.courses} progress_val={userList.progress_val} last_login={userList.last_login} status_title={userList.status_title} status_colour={userList.status_colour}/>
+                                    ))}
+                          </div> 
+            
+            
+                          </div>
           )}
         
           {activeItem === "Course Management" && (
-            <div>
-              <h1 className="text-2xl font-bold mb-4">Course Management</h1>
-              <p>Create, edit, and manage all courses.</p>
+            <div className="flex w-full flex-col">
+              {/* <h1 className="text-2xl font-bold mb-4">Course Management</h1>
+              <p>Create, edit, and manage all courses.</p> */}
+              <CourseManagement />
             </div>
           )}
         
@@ -488,9 +705,10 @@ export default function AdminDashboard () {
           )}
         
           {activeItem === "Notifications" && (
-            <div>
-              <h1 className="text-2xl font-bold mb-4">Notifications</h1>
-              <p>Manage system and user notifications.</p>
+            <div className="flex w-full flex-col">
+              {/* <h1 className="text-2xl font-bold mb-4">Notifications</h1>
+              <p>Manage system and user notifications.</p> */}
+              <NotificationManagement />
             </div>
           )}
         
