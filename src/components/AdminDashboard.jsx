@@ -1,36 +1,18 @@
 import React, { useState } from "react";
-import {
-  Home,
-  Users,
-  GraduationCap,
-  User,
-  Building2,
-  UserPlus,
-  Shield,
-  BookOpen,
-  Monitor,
-  BarChart3,
-  FileText,
-  Bell,
-  DollarSign,
-  Layers,
-  ChevronDown,
-  Sun,
-  Globe,
-  AlertTriangle,
-  UserCheck,
-  UserX,
-  Plus,
-  Import
-} from "lucide-react";
+import { Home,  Users,  GraduationCap,  User,  Building2,  UserPlus,  Shield,  BookOpen,  Bell,  DollarSign,  ChevronDown,  Sun,  Globe,  UserCheck,  UserX,  Plus,} from "lucide-react";
 import SearchBar from "./SearchBar";
 import DashboardCard from "./DashboardCard";
-import { div } from "framer-motion/client";
-import AlertCard from "./AlertCard";
 import UserManagementCardDesign from "./UserManagementCardDesign";
 import UserManagementListDesign from "./UserManagementListDesign";
-import CourseManagement from "./dashboard omponents/CourseManagement";
-import NotificationManagement from "./dashboard omponents/NotificationManagement";
+import CourseManagement from "./dashboard components/CourseManagement";
+import NotificationManagement from "./dashboard components/NotificationManagement";
+import CouponManager from "./dashboard components/CouponManager";
+import { Briefcase, CheckCircle, Handshake, PenTool } from "lucide-react";
+import SettlementTable from "./dashboard components/SettlementTable";
+import { Award } from "lucide-react";
+import CertificateUpload from "./dashboard components/CertificateUpload";
+import { Notebook } from "lucide-react";
+import ExportReports from "./dashboard components/ExportReports";
 
 // Sidebar menu structure
 const menuItems = [
@@ -41,30 +23,36 @@ const menuItems = [
     children: [
       { title: "Students", icon: <GraduationCap size={16} /> },
       { title: "Teachers", icon: <User size={16} /> },
-      { title: "University Staff", icon: <Building2 size={16} /> },
+      { title: "University", icon: <Building2 size={16} /> },
       { title: "Referral Partners", icon: <UserPlus size={16} /> },
       { title: "Sub-Admins", icon: <Shield size={16} /> },
+      { title: "Partners", icon: <Handshake size={16} /> },
+      { title: "Career Cell", icon: <Briefcase size={16} /> },
+      { title: "Writers", icon: <PenTool size={16} /> },
+      { title: "Reviewers", icon: <CheckCircle size={16} /> },
     ],
   },
   { title: "Course Management", icon: <BookOpen size={18} /> },
-  {
-    title: "Monitoring",
-    icon: <Monitor size={18} />,
-    children: [
-      { title: "Course Monitoring", icon: <BarChart3 size={16} /> },
-      { title: "Content Monitoring", icon: <FileText size={16} /> },
-    ],
-  },
+  // {
+  //   title: "Monitoring",
+  //   icon: <Monitor size={18} />,
+  //   children: [
+  //     { title: "Course Monitoring", icon: <BarChart3 size={16} /> },
+  //     { title: "Content Monitoring", icon: <FileText size={16} /> },
+  //   ],
+  // },
   { title: "Notifications", icon: <Bell size={18} /> },
   { title: "Finance & Settlement", icon: <DollarSign size={18} /> },
-  {
-    title: "Specialized",
-    icon: <Layers size={18} />,
-    children: [
-      { title: "Special 1", icon: <FileText size={16} /> },
-      { title: "Special 2", icon: <FileText size={16} /> },
-    ],
-  },
+  { title: "Certificate", icon: <Award size={18} /> },
+  { title: "Report", icon: <Notebook size={18} /> },
+  // {
+  //   title: "Specialized",
+  //   icon: <Layers size={18} />,
+  //   children: [
+  //     { title: "Special 1", icon: <FileText size={16} /> },
+  //     { title: "Special 2", icon: <FileText size={16} /> },
+  //   ],
+  // },
 ]
 
 const card = [
@@ -348,20 +336,47 @@ export default function AdminDashboard () {
         {/*debug colour */}
         <div className="w-full flex justify-center items-start bg-white mt-1 p-3 overflow-y-auto">
             {activeItem === "Dashboard" && (
-            <div className="w-full flex flex-col gap-5 items-center">
+            <div className="w-full flex flex-col gap-1 items-center">
 
-              <div className="w-full flex items-center justify-center">
+
+              <div className="w-full flex items-center justify-center mt-2">
                 <div className="bg-red-600 h-32 rounded-xl w-[98%] flex flex-col items-start justify-center p-5 text-white">
                  <span className="text-2xl font-bold">Admin Control Center 🛡️</span>
                  <span>Monitor and manage the entire platform</span>
                 </div>
               </div>
+                {/* quick links  */}
+                <span className="font-bold text-start w-full pl-4 mt-2 text-xl shadow-2xl">Quick Links</span>
+  
+                   {menuItems.map((item) => (
+            <div key={item.title} className="w-full">  
+              {/* Submenu items */}
+              {item.children && (
+                <div className="flex"> {item.children.map((child) => (
+                    <div key={child.title} onClick={() => handleItemClick(child)} className="flex items-center m-3 rounded-md cursor-pointer hover:bg-gray-100"
+                    >
+                    <div className="h-32 w-32 shadow-2xl rounded-xl bg-white flex items-center justify-center flex-col" >
+                     {child.icon}
+                     {child.title}
+                   </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+  
+                {/* quick links  */}
 
-              <div className="flex  w-full px-5 gap-2">
+              <div className="flex  w-full px-5 gap-2 mt-2">
                 {card.map((card, index) => (
                   <DashboardCard key={index} title={card.title} icon={card.icon} data={card.data} colour={card.colour}/>
                  ))}
               </div>
+
+                  <div className="w-full">
+                    <CouponManager />
+                  </div>
 
             </div>
           )}
@@ -493,7 +508,7 @@ export default function AdminDashboard () {
                           </div>
           )}
         
-          {activeItem === "University Staff" && (
+          {activeItem === "University" && (
             <div className="flex w-full flex-col">
             {/*debug colour */}
                             
@@ -713,23 +728,21 @@ export default function AdminDashboard () {
           )}
         
           {activeItem === "Finance & Settlement" && (
-            <div>
-              <h1 className="text-2xl font-bold mb-4">Finance & Settlement</h1>
-              <p>View and process financial transactions and settlements.</p>
+            <div className="w-full p-2">
+              
+              <SettlementTable />
             </div>
           )}
         
-          {activeItem === "Special 1" && (
+          {activeItem === "Certificate" && (
             <div>
-              <h1 className="text-2xl font-bold mb-4">Special 1</h1>
-              <p>Custom specialized feature 1 page.</p>
+              <CertificateUpload />
             </div>
           )}
         
-          {activeItem === "Special 2" && (
+          {activeItem === "Report" && (
             <div>
-              <h1 className="text-2xl font-bold mb-4">Special 2</h1>
-              <p>Custom specialized feature 2 page.</p>
+              <ExportReports />
             </div>
           )}
 
