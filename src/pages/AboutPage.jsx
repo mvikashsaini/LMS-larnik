@@ -141,8 +141,8 @@ const coreIcon = Target
             <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/>
             <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/>
             <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/>
-            <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/>
-            <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/>
+            {/* <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/>
+            <CardDesign variant="values" height="h-72" width="w-64" title={coreTitle} description={coreDes} icon={coreIcon} iconbgColor="bg-blue-600"/> */}
 
             </div>
         </div>
@@ -154,15 +154,15 @@ const coreIcon = Target
                 <p className="text-gray-500 pt-5 font-semibold">The passionate individuals behind Larnik's mission to transform education.</p>
             </div>
 
-            <CourseCard />
+            
             <div className="flex flex-row gap-5 flex-wrap">
 
                 <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
                 <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
                 <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
                 <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
-                <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
-                <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
+                {/* <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/>
+                <CardDesign variant="profile" img={img} title={name} subsTitle={subTitle} description={description} btnName="Connect" height="h-[320px]"/> */}
 
             </div>
         </div>
