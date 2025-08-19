@@ -42,10 +42,10 @@ export default function FooterBar() {
         <div>
           <h3 className="font-semibold text-lg mb-4 text-black">Platform</h3>
           <ul className="space-y-2">
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Instructors</a></li>
-            <li><a href="#">Certificates</a></li>
-            <li><a href="#">For Business</a></li>
+            <li><a href="/courses">Courses</a></li>
+            <li><a href="*">Instructors</a></li>
+            <li><a href="*">Certificates</a></li>
+            <li><a href="*">For Business</a></li>
           </ul>
         </div>
 
@@ -53,10 +53,10 @@ export default function FooterBar() {
         <div>
           <h3 className="font-semibold text-lg mb-4 text-black">Support</h3>
           <ul className="space-y-2">
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">System Status</a></li>
-            <li><a href="#">Community</a></li>
+            <li><a href="*">Help Center</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="*">System Status</a></li>
+            <li><a href="*">Community</a></li>
           </ul>
         </div>
 
@@ -64,10 +64,10 @@ export default function FooterBar() {
         <div>
           <h3 className="font-semibold text-lg mb-4 text-black">Company</h3>
           <ul className="space-y-2">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="*">Careers</a></li>
+            <li><a href="*">Privacy</a></li>
+            <li><a href="*">Terms</a></li>
           </ul>
         </div>
       </div>

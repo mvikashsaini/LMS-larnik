@@ -7,7 +7,7 @@ export default function CourseCard({ course }) {
     "Complete React Development Bootcamp"
   );
   const [author, setAuthor] = useState("by Sarah Johnson");
-  const [price, setPrice] = useState(74686365654684);
+  const [price, setPrice] = useState(456);
   const [img, setImg] = useState(
     "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop"
   );
