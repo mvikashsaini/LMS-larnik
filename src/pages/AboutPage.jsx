@@ -34,8 +34,9 @@ const coreIcon = Target
         </div>
 
         {/* small text  */}
-        <div className="mt-5">
-            <span className="text-black">We're on a mission to democratize quality education and empower learners worldwide <br /> through innovative technology and exceptional teaching.</span>
+        <div className="mt-5 flex flex-col justify-center w-full items-center">
+            <span className="text-black">We're on a mission to democratize quality education and empower learners worldwide</span>
+            <span className="text-black"> through innovative technology and exceptional teaching.</span>
         </div>
 
         {/* Cards */}
@@ -129,10 +130,10 @@ const coreIcon = Target
         </section>
 
         {/* cards  */}
-        <div className="p-10 bg-green-100 flex flex-col items-center justify-center gap-5">
-            <div className="w-[580px] mx-auto">
+        <div className="p-10 flex flex-col items-center justify-center gap-5">
+            <div className="w-[580px] flex flex-col items-center justify-center">
                 <h1 className="text-black font-bold text-3xl ">Our Core Values</h1>
-                <p className="text-black pt-5 font-semibold">The principles that guide everything we do and shape our commitment to learners worldwide.</p>
+                <p className="text-black pt-5 font-semibold text-center">The principles that guide everything we do and shape our commitment to learners worldwide.</p>
             </div>
 
             <div className="flex flex-row gap-5 flex-wrap">
@@ -148,8 +149,8 @@ const coreIcon = Target
         </div>
 
         {/* team crads  */}
-        <div className="p-10 bg-green-300 flex flex-col items-center justify-center gap-5">
-            <div className="w-[580px] mx-auto">
+        <div className="p-10  flex flex-col items-center justify-center gap-5">
+            <div className="w-[580px] flex flex-col items-center justify-center">
                 <h1 className="text-black font-bold text-3xl ">Meet Our Team</h1>
                 <p className="text-gray-500 pt-5 font-semibold">The passionate individuals behind Larnik's mission to transform education.</p>
             </div>

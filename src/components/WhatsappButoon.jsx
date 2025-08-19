@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BuyMeCoffeeWhatsApp() {
+export default function WhatsappButoon() {
   return (
     <a
       href="https://wa.me/918069640418"
