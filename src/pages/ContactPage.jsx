@@ -156,7 +156,7 @@ export default function ContactPage() {
                 setErrors({});
                 setStatus(null);
               }}
-              className="px-5 py-3 rounded-xl    bg-indigo-600  text-sm"
+              className="px-5 py-3 rounded-xl    bg-indigo-600  text-sm text-white"
             >
               Reset
             </button>

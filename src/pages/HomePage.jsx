@@ -2,11 +2,19 @@
 import { ArrowRight, Award, BookOpen, Play, Star, User, Users } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import AboutPage from './AboutPage';
+import { div } from 'framer-motion/client';
+import Navbar from '../components/Navbar';
+import TimelineCard from '../components/TimelineCard';
+import DiscountBar from '../components/DiscountBar';
+import TrustedPatners from '../components/TrustedPatner';
+import SubscriptionPlans from '../components/SubscriptionPlans';
+import DownloadApp from '../components/DownloadApp';
 
 export default function HomePage  (){
 
   return (
     <>
+
     <div id="main" className="bg-[#F3F8F4] mt-1 p-20">
   <div className="grid grid-cols-2 gap-8 items-center">
     
@@ -32,7 +40,7 @@ export default function HomePage  (){
 
       {/* button area */}
       <div className="flex gap-5">
-        <button className="shadow border-black w-48 h-10 bg-green-800 rounded-xl text-white flex items-center justify-center gap-1">
+        <button className="shadow border-black  h-10 bg-green-800 rounded-xl text-white flex items-center justify-center gap-1 w-1/3">
           Start Your Journey <ArrowRight size={20} />
         </button>
         <button className="shadow border-black w-48 h-10 bg-white rounded-xl text-black flex items-center justify-center gap-1">
@@ -100,7 +108,7 @@ export default function HomePage  (){
   </div>
 
   {/* Bottom rectangle glass block */}
-  <div className="absolute -bottom-6 right-6 backdrop-blur-lg bg-white/0 p-4 rounded-xl flex items-center gap-3 shadow-lg border border-white/20">
+  <div className="absolute -bottom-6 -right-8 backdrop-blur-lg bg-white/0 p-4 rounded-xl flex items-center gap-3 shadow-lg border border-white/20">
     {/* Intersecting Logos */}
     <div className="relative w-32 h-10">
       <div className="absolute left-0 w-10 h-10 bg-green-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
@@ -126,8 +134,16 @@ export default function HomePage  (){
 
 </div>
   </div>
-</div>
+    </div>
+    
+
+    <DiscountBar />
+    <TimelineCard />
+    <TrustedPatners />
+    <SubscriptionPlans />
+    <DownloadApp />
     </>
+
   );
 };
 

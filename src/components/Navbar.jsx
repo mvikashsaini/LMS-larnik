@@ -1,5 +1,6 @@
 import React from "react";
 import { BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -18,16 +19,23 @@ export default function Navbar() {
 
         {/* Navigation Links */}
         <nav className="hidden md:flex space-x-6 text-gray-700 font-medium ml-30">
-          <a href="#courses" className="hover:text-green-600 ml-40">Courses</a>
-          <a href="#about" className="hover:text-green-600">About</a>
-          <a href="#features" className="hover:text-green-600">Features</a>
-          <a href="#contact" className="hover:text-green-600">Contact</a>
+          <a href="/" className="hover:text-green-600 ml-40">Home</a>
+          <a href="/courses" className="hover:text-green-600 ml-40">Courses</a>
+          <a href="/about" className="hover:text-green-600">About</a>
+          {/* <a href="#features" className="hover:text-green-600">Features</a> */}
+          <a href="/contact" className="hover:text-green-600">Contact</a>
+          <a href="/admin" className="hover:text-green-600">Dashboard</a>
         </nav>
 
         {/* Login/Signup */}
         <div className="hidden md:flex items-center space-x-3 text-green-800 ml-y">
+          
+          <a href="/login">
           <button className="hover:text-green-600 ml-40">Login</button>
+          </a>
+          <a href="/signup">
           <button className="hover:text-green-600">Sign Up</button>
+          </a>
         </div>
       </div>
     </header>

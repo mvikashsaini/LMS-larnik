@@ -30,7 +30,7 @@ export default function TrustedPatners() {
   ];
 
   return (
-    <section className="bg-gray-50 py-16 px-6">
+    <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto text-center">
         {/* Title */}
         <h2 className="text-2xl font-bold text-gray-900">

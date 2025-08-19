@@ -30,7 +30,7 @@ const Iconcomponent = icon;
                         <>
                             <img src={img} className="rounded-t-2xl"/>
                             <span className="text-black font-bold text-xl text-left p-3">{title}</span>
-                            <span className="text-gray-500 font-semibold text-left p-3">{description}</span>
+                            <span className="text-gray-500 font-semibold text-center p-3">{description}</span>
                             <hr className="border-t border-gray-300 mt-5 w-72" />
                             <div className="w-[80%] mt-4 flex justify-between items-center mx-auto">
                             <span className="text-green-800 font-bold text-xl">₹{price}</span>
@@ -54,7 +54,7 @@ const Iconcomponent = icon;
                             <div className="flex flex-col items-center justify-center w-full h-full gap-5">
                                 <Iconcomponent color="white" size={40} className={`${iconbgColor} w-16 h-16 rounded-xl p-2`}/>
                                 <span className="text-xl font-bold text-black">{title}</span>
-                                <span className="text-black">{description}</span>
+                                <span className="text-black text-center">{description}</span>
                             </div>
                             </>
                         ) : variant === "profile" ?
