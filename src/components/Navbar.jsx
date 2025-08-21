@@ -7,7 +7,7 @@ export default function Navbar() {
     <header className="w-full bg-white/40 shadow sticky top-0 z-50 backdrop-blur-md">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 shadow-[-0px_20px_22px_-15px_rgba(0,0,0,0.1)]">
         {/* Logo */}
-        <div className="flex items-center space-x-2 ml-40">
+        <a href="/"><div className="flex items-center space-x-2 ml-40">
           <div className="bg-green-700 text-white p-2 rounded-xl">
             <BookOpen size={20} />
           </div>
@@ -15,7 +15,7 @@ export default function Navbar() {
           <span className="font-medium text-sm text-gray-800 bg-green-100 px-2 py-0.5 rounded-2xl">
             LMS
           </span>
-        </div>
+        </div></a>
 
         {/* Navigation Links */}
         <nav className="hidden md:flex space-x-6 text-gray-700 font-medium ml-30">
