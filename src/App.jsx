@@ -83,19 +83,9 @@ export default function App() {
       <WhatsappButoon />
        </div>
       )}
-
-      {/* {location.pathname !== "/about" && (
-        <SearchBar />
-      )} */}
-      
-      {/* Simple Navbar */}
-      {/* <nav className="p-4 bg-gray-200 flex gap-4"> */}
-        <Link to="/"></Link>
-        {/* <Link to="/about">About</Link> */}
-      {/* </nav> */}
-
       {/* Routes */}
-      <Routes>
+      <div>
+        <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -106,6 +96,7 @@ export default function App() {
         {/* Catch-all 404 */}
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
+      </div>
       {!hiddenRoutes.includes(location.pathname) && (
        <div>
          <FooterBar />
